@@ -1,0 +1,14 @@
+<svg width="89" height="67" viewBox="0 0 89 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.7">
+<mask id="path-1-inside-1" fill="white">
+<rect x="0.000244141" width="89" height="67" rx="5"/>
+</mask>
+<rect x="0.000244141" width="89" height="67" rx="5" stroke="white" stroke-width="12" mask="url(#path-1-inside-1)"/>
+<rect x="13.3619" y="11.4365" width="61.3298" height="45.0704" rx="3" stroke="#4D4949" stroke-width="4"/>
+<rect x="14.2556" y="12.324" width="58.5957" height="4.60563" rx="2.30282" stroke="#4D4949" stroke-width="2"/>
+<line x1="20.0428" y1="24.3662" x2="49.0748" y2="24.3662" stroke="#948F8F" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="20.0428" y1="32.8591" x2="68.0109" y2="32.8591" stroke="#948F8F" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="20.0428" y1="41.3521" x2="68.0109" y2="41.3521" stroke="#948F8F" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="20.0428" y1="49.845" x2="68.0109" y2="49.845" stroke="#948F8F" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
