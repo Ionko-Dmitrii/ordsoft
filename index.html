@@ -24,21 +24,20 @@
           </div>
         </div>
       </div>
+      <div class="navigation">
+        <div class="logo"><a href="#"><img src="img/svg/logo.svg" alt="load img"/></a></div>
+        <ul>
+          <li><a href="#main">Main</a></li>
+          <li><a href="#about-us">About us</a></li>
+          <li><a href="#directions">Main directions</a></li>
+          <li><a href="#technologies">Stack technologies</a></li>
+          <li><a href="#our-team">Our team has specialists in development</a></li>
+          <li><a href="#our-project">Our projects</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+        </ul>
+      </div>
       <section class="main_section" id="main">
-        <div class="left">
-          <div class="navigation">
-            <div class="logo"><a href="#"><img src="img/svg/logo.svg" alt="load img"/></a></div>
-            <ul>
-              <li><a href="#main">Main</a></li>
-              <li><a href="#about-us">About us</a></li>
-              <li><a href="#directions">Main directions</a></li>
-              <li><a href="#technologies">Stack technologies</a></li>
-              <li><a href="#our-team">Our team has specialists in development</a></li>
-              <li><a href="#our-project">Our projects</a></li>
-              <li><a href="#contacts">Contacts</a></li>
-            </ul>
-          </div>
-        </div>
+        <div class="left"></div>
         <div class="right">
           <div class="main_section-right">
             <div class="main_section__heading">
@@ -159,7 +158,7 @@
               </div>
             </div>
             <div class="technologies-animated__content technologies-mobil">
-              <div class="animated-tehnologies-block">
+              <div class="animated-tehnologies-block animated-mobil">
                 <div class="animated-tehnologies-block-top">
                   <div class="animated-top__img"><img src="img/svg/img12.svg" alt="load img"/></div>
                   <div class="animated-top__img"><img src="img/svg/img13.svg" alt="load img"/></div>
@@ -169,7 +168,7 @@
                   <div class="animated-bottom__img"><img src="img/svg/img11.svg" alt="load img"/></div>
                 </div>
               </div>
-              <div class="animated-tehnologies-block">
+              <div class="animated-tehnologies-block animated-mobil2">
                 <div class="animated-tehnologies-block-top">
                   <div class="animated-top__img"><img src="img/svg/img17.svg" alt="load img"/></div>
                   <div class="animated-top__img"><img src="img/svg/img18.svg" alt="load img"/></div>
@@ -180,7 +179,7 @@
                   <div class="animated-bottom__img"><img src="img/svg/img16.svg" alt="load img"/></div>
                 </div>
               </div>
-              <div class="animated-tehnologies-block">
+              <div class="animated-tehnologies-block animated-mobil3">
                 <div class="animated-tehnologies-block-top">
                   <div class="animated-top__img"><img src="img/svg/img19.svg" alt="load img"/></div>
                 </div>
@@ -362,24 +361,38 @@
       
       $(document).ready(function () {
       
+      
+          let link = $(".main .navigation ul li");
+      
+          let addClass = function (index) {
+              link.each(function (i, obj) {
+                  if (i === index) {
+                      $(obj).find("a").addClass("active")
+                  }
+              })
+          };
+      
+          addClass(0)
+      
+      
           $(document).on("scroll", window, function () {
       
               if ($(window).scrollTop() > $(".main").offset().top) {
-                  $(".main_section .navigation ul a").removeClass("active");
-                  $(".main_section .navigation ul a[href$='main']").addClass("active");
+                  $(".main .navigation ul a").removeClass("active");
+                  $(".main .navigation ul a[href$='main']").addClass("active");
               }
       
               if ($(window).scrollTop() > $("#about-us").offset().top - 50) {
-                  $(".main_section .navigation ul a").removeClass("active");
-                  $(".main_section .navigation ul a[href$='about-us']").addClass("active");
+                  $(".main .navigation ul a").removeClass("active");
+                  $(".main .navigation ul a[href$='about-us']").addClass("active");
                   $("#about-us").addClass("about-us-active");
               } else {
                   $("#about-us").removeClass("about-us-active");
               }
       
               if ($(window).scrollTop() > $("#directions").offset().top - 50) {
-                  $(".main_section .navigation ul a").removeClass("active");
-                  $(".main_section .navigation ul a[href$='directions']").addClass("active");
+                  $(".main .navigation ul a").removeClass("active");
+                  $(".main .navigation ul a[href$='directions']").addClass("active");
                   $("#directions").addClass("active-directions")
               }
       
@@ -396,18 +409,18 @@
               }
       
               if ($(window).scrollTop() > $("#technologies").offset().top - 50) {
-                  $(".main_section .navigation ul a").removeClass("active");
-                  $(".main_section .navigation ul a[href$='technologies']").addClass("active");
+                  $(".main .navigation ul a").removeClass("active");
+                  $(".main .navigation ul a[href$='technologies']").addClass("active");
               }
       
               if ($(window).scrollTop() > $("#our-team").offset().top - 50) {
-                  $(".main_section .navigation ul a").removeClass("active");
-                  $(".main_section .navigation ul a[href$='our-team']").addClass("active");
+                  $(".main .navigation ul a").removeClass("active");
+                  $(".main .navigation ul a[href$='our-team']").addClass("active");
               }
       
               if ($(window).scrollTop() > $("#our-project").offset().top - 50) {
-                  $(".main_section .navigation ul a").removeClass("active");
-                  $(".main_section .navigation ul a[href$='our-project']").addClass("active");
+                  $(".main .navigation ul a").removeClass("active");
+                  $(".main .navigation ul a[href$='our-project']").addClass("active");
                   $("#our-project").addClass("our-project-active");
               } else {
                   $("#our-project").removeClass("our-project-active");
@@ -434,12 +447,36 @@
               // }
       
               if ($(window).scrollTop() > $("#contacts").offset().top - 50) {
-                  $(".main_section .navigation ul a").removeClass("active");
-                  $(".main_section .navigation ul a[href$='contacts']").addClass("active");
+                  $(".main .navigation ul a").removeClass("active");
+                  $(".main .navigation ul a[href$='contacts']").addClass("active");
               }
       
       
           });
+      
+      
+          $(document).on("scroll", window, function () {
+      
+              if ($(window).scrollTop() > $("#technologies").offset().top - 150) {
+                  $(".animated-mobil").addClass("active-technologies-mobil2")
+              } else {
+                  $(".animated-mobil").removeClass("active-technologies-mobil2")
+              }
+      
+              if ($(window).scrollTop() > $(".animated-mobil2").offset().top - 150) {
+                  $(".animated-mobil2").addClass("active-technologies-mobil2")
+              } else {
+                  $(".animated-mobil2").removeClass("active-technologies-mobil2")
+              }
+      
+              if ($(window).scrollTop() > $(".animated-mobil3").offset().top - 150) {
+                  $(".animated-mobil3").addClass("active-technologies-mobil2")
+              } else {
+                  $(".animated-mobil3").removeClass("active-technologies-mobil2")
+              }
+      
+          });
+      
       });
       
       

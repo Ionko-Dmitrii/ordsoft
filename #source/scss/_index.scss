@@ -18,7 +18,7 @@ section {
 
 .left {
   position: relative;
-  z-index: 60;
+  z-index: 50;
   width: 21%;
 
   @media(max-width: 1280px) {
@@ -134,6 +134,7 @@ section {
 
 .navigation {
   position: fixed;
+  z-index: 60;
   width: 21%;
   background: linear-gradient(180deg, #000000 0%, #3E0506 100%);
 
@@ -209,6 +210,9 @@ section {
   }
 
 }
+
+
+
 
 @media(max-width: 1280px) {
 
@@ -1035,10 +1039,15 @@ section {
 
       .animated-tehnologies-block-bottom {
         align-items: flex-end;
+        transform: translateY(100%);
+        transition: transform .5s, opacity .2s;
+        opacity: 0;
       }
 
       .animated-tehnologies-block-top {
-
+        transform: translateY(-100%);
+        transition: transform .5s, opacity .2s;
+        opacity: 0;
         margin: 0 auto;
 
       }
@@ -1048,6 +1057,7 @@ section {
       display: flex;
       flex-direction: column;
       width: 100%;
+      overflow: hidden;
     }
   }
 
@@ -1116,6 +1126,50 @@ section {
   }
 
 }
+
+
+.technologies-mobil .active-technologies-mobil2 {
+
+  &:nth-child(1) {
+
+    .animated-tehnologies-block-top {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .animated-tehnologies-block-bottom {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &:nth-child(2) {
+
+    .animated-tehnologies-block-top {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .animated-tehnologies-block-bottom {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &:nth-child(3) {
+
+    .animated-tehnologies-block-top {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .animated-tehnologies-block-bottom {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
 
 .our-team {
   background: #020101;
