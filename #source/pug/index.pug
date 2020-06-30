@@ -379,13 +379,13 @@ block scripts
                     $("#directions").addClass("active-directions")
                 }
 
-                if ($(window).scrollTop() > $("#directions").offset().top) {
+                if ($(window).scrollTop() > $("#directions").offset().top - 50) {
                     $("#directions").addClass("active-directions")
                 } else {
                     $("#directions").removeClass("active-directions")
                 }
 
-                if ($(window).scrollTop() > $("#technologies").offset().top) {
+                if ($(window).scrollTop() > $("#technologies").offset().top - 50) {
                     $("#technologies").addClass("active-technologies")
                 } else {
                     $("#technologies").removeClass("active-technologies")
